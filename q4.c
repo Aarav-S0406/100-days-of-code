@@ -15,7 +15,6 @@ Area=28.27, Circumference=18.85
 */
 
 #include<stdio.h>
-#include<math.h>
 
 int main () {
 
@@ -30,3 +29,4 @@ int main () {
 
     return 0;
 }
+
