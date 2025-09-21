@@ -34,4 +34,5 @@ int main () {
         printf("composite");
     }
  return 0;
+
 }
