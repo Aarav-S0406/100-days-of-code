@@ -21,20 +21,33 @@ Output 3:
 5,5
 
 */
-#include<stdio.h>
+#include <stdio.h>
 
-int main () {
+int main() {
+    int num[] = {5,7,7,8,8,10};
+    int n = sizeof(num) / sizeof(num[0]);
+    int target;
 
-    int a[]={5,7,7,8,8,10};
-    int b;
+    printf("Enter target: ");
+    scanf("%d", &target);
 
-    printf("enter number: ");
-    scanf("%d", &b);
+    int first = -1, last = -1;
 
-    for(int i=0; i<=5; i++){
-        if(a[i]==b){
-            printf("%d\n", i);
+    for (int i = 0; i <= n-1; i++) {
+        if (num[i] == target) {
+            first = i;
+            break;
         }
     }
+    for (int i = n - 1; i >= 0; i--) {
+        if (num[i] == target) {
+            last = i;
+            break;
+        }
+    }
+
+    printf("%d,%d\n", first, last);
+
+
     return 0;
 }
